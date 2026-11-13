@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>Cyberpunk: an Omarchy theme</title>
+<meta name="description" content="Neon cyan, hot magenta and electric yellow on void purple. A full theme for Omarchy.">
+<meta property="og:title" content="Cyberpunk: an Omarchy theme">
+<meta property="og:description" content="Neon cyan, hot magenta and electric yellow on void purple.">
+<meta property="og:image" content="preview.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8C%86%3C/text%3E%3C/svg%3E">
+<style>
+:root{--bg:#0b0614;--panel:#150b26;--line:#2a1650;--fg:#d6e4ff;--dim:#8a7fb0;--cyan:#00f0ff;--mag:#ff2a6d;--yel:#fcee0a;--grn:#05ffa1;--pur:#b967ff;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 ui-monospace,"JetBrains Mono","Fira Code",SFMono-Regular,Menlo,Consolas,monospace;
+background-image:linear-gradient(rgba(0,240,255,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(185,103,255,.03) 1px,transparent 1px);background-size:40px 40px}
+body::after{content:"";position:fixed;inset:0;pointer-events:none;background:repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 4px);z-index:10}
+a{color:var(--cyan)}
+main{max-width:1040px;margin:0 auto;padding:0 1.25rem 4rem}
+header.hero{padding:5rem 0 2.5rem;text-align:center}
+.tag{display:inline-block;border:1px solid var(--mag);color:var(--mag);padding:.15rem .7rem;font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;margin-bottom:1.2rem}
+h1{font-size:clamp(2.4rem,8vw,5rem);line-height:1;margin:0 0 1rem;letter-spacing:-.03em;color:var(--cyan);text-shadow:0 0 12px rgba(0,240,255,.7),3px 3px 0 var(--mag)}
+.sub{color:var(--dim);max-width:34rem;margin:0 auto}
+.shot{margin:2.5rem 0;border:1px solid var(--cyan);box-shadow:0 0 0 4px var(--bg),0 0 0 5px var(--mag),0 0 40px rgba(255,42,109,.35)}
+.shot img{display:block;width:100%;height:auto}
+h2{font-size:1.1rem;text-transform:uppercase;letter-spacing:.2em;color:var(--yel);margin:3.5rem 0 1rem}
+h2::before{content:"// ";color:var(--mag)}
+.cmd{display:flex;align-items:stretch;background:var(--panel);border:1px solid var(--line);margin:.6rem 0}
+.cmd code{flex:1;padding:.9rem 1rem;overflow-x:auto;white-space:nowrap;color:var(--grn)}
+.cmd code::before{content:"$ ";color:var(--dim)}
+.cmd button{border:0;border-left:1px solid var(--line);background:var(--line);color:var(--cyan);font:inherit;padding:0 1.2rem;cursor:pointer}
+.cmd button:hover,.cmd button:focus-visible{background:var(--cyan);color:var(--bg);outline:none}
+.note{color:var(--dim);font-size:.9rem}
+.swatches{display:grid;grid-template-columns:repeat(auto-fill,minmax(120px,1fr));gap:.8rem}
+.sw{border:1px solid var(--line);background:var(--panel);cursor:pointer;padding:0;text-align:left;color:var(--fg);font:inherit}
+.sw:hover,.sw:focus-visible{border-color:var(--cyan);outline:none}
+.sw i{display:block;height:64px}
+.sw span{display:block;padding:.4rem .6rem;font-size:.8rem}
+.sw small{display:block;color:var(--dim)}
+.term{background:#0b0614;border:1px solid var(--line);padding:1rem 1.2rem;font-size:.9rem;overflow-x:auto}
+.term .p{color:var(--grn)}.term .d{color:var(--cyan)}.term .c{color:var(--dim)}.term .e{color:var(--mag)}.term .y{color:var(--yel)}.term .u{color:var(--pur)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:.6rem;padding:0;list-style:none}
+.grid li{border:1px solid var(--line);background:var(--panel);padding:.5rem .8rem;font-size:.9rem}
+.grid li::before{content:"▸ ";color:var(--mag)}
+footer{border-top:1px solid var(--line);margin-top:4rem;padding-top:1.5rem;color:var(--dim);font-size:.85rem;text-align:center}
+#toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(150%);background:var(--cyan);color:var(--bg);padding:.5rem 1.2rem;transition:transform .2s;z-index:20}
+#toast.on{transform:translateX(-50%) translateY(0)}
+</style>
+</head>
+<body>
+<main>
+<header class="hero">
+  <div class="tag">Omarchy theme</div>
+  <h1>CYBERPUNK</h1>
+  <p class="sub">Neon cyan, hot magenta and electric yellow on void purple. One command, and your whole desktop goes night city.</p>
+</header>
+
+<div class="shot"><img src="preview.png" alt="Synthwave sunset over a neon skyline with a perspective grid: the theme’s default wallpaper"></div>
+
+<h2>Install</h2>
+<div class="cmd"><code id="c1">omarchy-theme-install https://github.com/YOUR_USERNAME/omarchy-cyberpunk-theme</code><button data-copy="c1">copy</button></div>
+<p class="note">Omarchy clones the repo and applies the theme. Switch back any time with <b>Super + Alt + Space → Style → Theme</b>.</p>
+
+<h2>Manual install</h2>
+<div class="cmd"><code id="c2">git clone https://github.com/YOUR_USERNAME/omarchy-cyberpunk-theme ~/.config/omarchy/themes/cyberpunk</code><button data-copy="c2">copy</button></div>
+<div class="cmd"><code id="c3">omarchy-theme-set cyberpunk</code><button data-copy="c3">copy</button></div>
+
+<h2>Palette</h2>
+<div class="swatches" id="sw"></div>
+<p class="note">Click a swatch to copy its hex value.</p>
+
+<h2>Terminal preview</h2>
+<pre class="term"><span class="p">neo@nightcity</span><span class="c">:</span><span class="d">~/chrome</span><span class="c">$</span> ls --color
+<span class="d">daemons/</span>  <span class="u">netrunner.sh</span>  <span class="y">braindance.log</span>  <span class="e">flatline.core</span>
+<span class="p">neo@nightcity</span><span class="c">:</span><span class="d">~/chrome</span><span class="c">$</span> git status
+<span class="c">On branch</span> <span class="p">main</span>
+<span class="e">modified:</span>   <span class="y">cyberware.conf</span>
+<span class="p">neo@nightcity</span><span class="c">:</span><span class="d">~/chrome</span><span class="c">$</span> <span class="c"># wake up, samurai</span></pre>
+
+<h2>What’s themed</h2>
+<ul class="grid">
+  <li>Alacritty</li><li>Kitty</li><li>Ghostty</li><li>Hyprland borders</li><li>Hyprlock</li><li>Waybar</li>
+  <li>Walker</li><li>Mako</li><li>SwayOSD</li><li>btop</li><li>Neovim</li><li>VS Code</li><li>Chromium</li><li>Icons</li><li>Wallpaper</li>
+</ul>
+
+<footer>
+  <a id="repo" href="https://github.com/YOUR_USERNAME/omarchy-cyberpunk-theme">View on GitHub</a> · MIT licensed
+</footer>
+</main>
+<div id="toast" role="status"></div>
+
+<script>
+(function(){
+  // On GitHub Pages (user.github.io/repo/) fill in the real username and repo automatically.
+  var host=location.hostname, user=null, repo="omarchy-cyberpunk-theme";
+  if(/\.github\.io$/.test(host)){
+    user=host.split(".")[0];
+    var seg=location.pathname.split("/").filter(Boolean)[0];
+    if(seg) repo=seg;
+  }
+  if(user){
+    var url="https://github.com/"+user+"/"+repo;
+    document.querySelectorAll("code").forEach(function(c){c.textContent=c.textContent.replace("https://github.com/YOUR_USERNAME/omarchy-cyberpunk-theme",url)});
+    document.getElementById("repo").href=url;
+  }
+
+  var colors=[["Void","#0b0614"],["Panel","#2a1650"],["Foreground","#d6e4ff"],["Cyan","#00f0ff"],["Magenta","#ff2a6d"],["Yellow","#fcee0a"],["Green","#05ffa1"],["Purple","#b967ff"],["Blue","#3a7bff"],["Orange","#ff9e3d"]];
+  var sw=document.getElementById("sw");
+  colors.forEach(function(c){
+    var b=document.createElement("button");b.className="sw";b.dataset.hex=c[1];
+    b.innerHTML='<i style="background:'+c[1]+'"></i><span>'+c[0]+'<small>'+c[1]+'</small></span>';
+    sw.appendChild(b);
+  });
+
+  var toast=document.getElementById("toast"),t;
+  function say(m){toast.textContent=m;toast.classList.add("on");clearTimeout(t);t=setTimeout(function(){toast.classList.remove("on")},1400)}
+  function copy(text){
+    if(navigator.clipboard){navigator.clipboard.writeText(text).then(function(){say("copied")},function(){say("copy failed")})}
+    else say("copy not supported");
+  }
+  document.addEventListener("click",function(e){
+    var b=e.target.closest("[data-copy]");
+    if(b){copy(document.getElementById(b.dataset.copy).textContent);return}
+    var s=e.target.closest(".sw");
+    if(s) copy(s.dataset.hex);
+  });
+})();
+</script>
+</body>
+</html>
